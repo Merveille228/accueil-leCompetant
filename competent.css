@@ -1,0 +1,951 @@
+body {
+  user-select: none;
+}
+header {
+  box-shadow: 1px 1px 10px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transform: translateY(-70px);
+  z-index: 1000;
+}
+.desktop-nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+  li {
+    /* border: 1px solid; */
+    height: 4vh;
+  }
+}
+.desktop-nav {
+  width: 40%;
+}
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+.desktop-nav ul li a:hover {
+  color: orange;
+  transition: 0.3s;
+  font-size: 1.2em;
+}
+
+/* Menu Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Overlay pour le menu mobile */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu Mobile */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #fff5e6);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+  padding-top: 80px;
+  overflow-y: auto;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.mobile-nav ul li a:hover,
+.mobile-nav ul li a:active {
+  background-color: rgba(255, 165, 0, 0.1);
+  color: orange;
+  border-left-color: orange;
+  padding-left: 35px;
+}
+
+.mobile-nav .mobile-contact-btn {
+  background: linear-gradient(135deg, #ffa500, #ff8c00);
+  color: white !important;
+  font-weight: bold;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border-left: none !important;
+}
+
+.mobile-nav .mobile-contact-btn:hover {
+  background: linear-gradient(135deg, #ff8c00, #ffa500);
+  transform: scale(1.05);
+  padding-left: 30px !important;
+}
+#competent {
+  color: orange;
+  font-size: 2em;
+  position: absolute;
+  margin-top: -11px;
+}
+.logo {
+  margin-top: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.contact {
+  height: 7vh;
+  width: 12%;
+  font-size: 1.2em;
+  background-color: orange;
+  border-radius: 10px;
+  border: orange;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  white-space: nowrap;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+.contact:hover {
+  transform: scale(1.04);
+  transition: 1s;
+  border: 1px solid orange;
+  background-color: rgb(255, 255, 255);
+  a{
+    color: orange;
+  }
+}
+main {
+  margin-top: 10%;
+}
+#accueil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.sous-titre-accueil {
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: gray;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#promesse {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 4em;
+  font-family: "Times New Roman", Times, serif;
+  width: 85%;
+  line-height: 1.2;
+}
+
+.texte{
+  transform: translateX(-600px);
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.image {
+  width: 50%;
+  transform: translateX(700px);
+  flex: 1;
+  min-width: 300px;
+}
+
+.image img {
+  width: 50vw;
+  height: 65vh;
+  margin-left: -8px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 1.1em;
+  font-family: "Times New Roman", Times, serif;
+  width: 85%;
+  margin-top: 0;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #555;
+  font-weight: normal;
+}
+
+.boutons-accueil {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contact2 {
+  height: 7vh;
+  width: 25%;
+  font-size: 1.2em;
+  background-color: orange;
+  border-radius: 10px;
+  color: white;
+  border: orange;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.contact2:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+  color: orange;
+  border: 1px orange solid;
+}
+.invit {
+  margin-left: 0;
+  height: 7vh;
+  width: 25%;
+  font-size: 1.2em;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 1px gray;
+  border: 1px solid gray;
+  color: blue;
+  cursor: pointer;
+  border: orange;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.invit:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+/* les section */
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    div{
+        width: 50%;
+        flex: 1;
+        min-width: 300px;
+    }
+    div img {
+      width: 100%;
+      height: auto;
+      max-height: 60vh;
+      object-fit: cover;
+    }
+}
+.texte_about{
+  transform: translateX(-600px);
+}
+
+.texte_about p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.texte_about ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.texte_about ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+#services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div{
+        background: linear-gradient(135deg, #fff5e6, #ffe4b5, #ffffff);
+        border: 2px solid #ffa500;
+        border-radius: 20px;
+        width: 25%;
+        min-width: 200px;
+        height: 25vh;
+        padding: 5px;
+        padding-top: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
+        transition: all 0.3s ease;
+        
+    }
+    div:hover{
+        background: linear-gradient(135deg, #ffa500, #ff8c00, #ffa500);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(255, 165, 0, 0.4);
+        color: white;
+        
+    }
+    div:hover p {
+        color: white;
+    }
+    .icon{
+        background: linear-gradient(135deg, #ffa500, #ff8c00);
+        width: 15%;
+        height: 7vh;
+        border-radius: 9px;
+        font-size: 2rem;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);
+    }
+    div:hover .icon {
+        background: linear-gradient(135deg, #ffffff, #fff5e6);
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+}
+#avantages{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div{
+    border-radius: 20px;
+    height: 30vh;
+    width: 45%;
+    min-width: 250px;
+    padding: 5px;
+    padding-top: 20px;
+    margin: 10px;
+    background: linear-gradient(135deg, #e6f3ff, #b3d9ff, #ffffff);
+    border: 2px solid #4a90e2;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+    transition: all 0.3s ease;
+    }
+    div:hover {
+        background: linear-gradient(135deg, #4a90e2, #357abd, #4a90e2);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(74, 144, 226, 0.4);
+        color: white;
+    }
+    div:hover p {
+        color: white;
+    }
+    p{
+        font-size: 1.3rem;
+    }
+    .icon{
+        text-align: center;
+        background: linear-gradient(135deg, #4a90e2, #357abd);
+        width: 15%;
+        height: 7vh;
+        border-radius: 9px;
+        font-size: 2rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+    }
+    div:hover .icon {
+        background: linear-gradient(135deg, #ffffff, #e6f3ff);
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+}
+#projets{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+     div{
+    
+    height: 38vh;
+    width: 45%;
+    } 
+     img{
+      padding: 5px;
+      margin: 10px;
+      width: 45%;
+      border-radius: 20px;
+      height: 35vh;
+      object-fit: cover;
+      flex: 1;
+      min-width: 250px;
+     }
+}
+#contact{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  .contact2 {
+  height: 7vh;
+  width: 40%;
+  font-size: 1.2em;
+  background-color: orange;
+  border-radius: 10px;
+  color: white;
+  border: orange;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.contact2:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+  color: orange;
+  border: 1px orange solid;
+}
+.invit {
+  height: 7vh;
+  width: 50%;
+  font-size: 1.2em;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 1px gray;
+  border: 1px solid gray;
+  color: blue;
+  cursor: pointer;
+  border: orange;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  a{
+    color: blue;
+    text-decoration: none;
+  }
+}
+.invit:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+  a{
+    color: #ffffff;
+  }
+}
+  div{
+    width: 40%;
+    flex: 1;
+    min-width: 300px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+    gap: 15px;
+    input, textarea{
+      height: 5vh;
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      font-size: 1em;
+    }
+    textarea {
+      height: auto;
+      min-height: 100px;
+      resize: vertical;
+    }
+  }
+}
+/* Styles pour les titres de section */
+.titre-section {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: gray;
+  margin: 60px 0 30px 0;
+  text-align: center;
+}
+
+/* Animations au chargement de la page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation d'entrée existante */
+.show{
+  transform: translateX(0px);
+  transition: 1s ease-in;
+}
+
+/* Classes d'animation pour le chargement */
+.fade-in-section {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.fade-in-section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.fade-in-section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.fade-in-section:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.fade-in-section:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Animation pour les cards de services */
+#services div {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+#services div:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#services div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+#services div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+#services div:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+/* Animation pour les cards d'avantages */
+#avantages div {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+#avantages div:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#avantages div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/* Animation pour les images de projets */
+#projets img {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+#projets img:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#projets img:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+#projets img:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+header:not(.show) {
+  animation: slideInDown 0.6s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-70px);
+  }
+}
+
+/* Media queries pour responsive */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    width: 50%;
+  }
+  
+  #promesse {
+    font-size: 3em;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header et Navigation */
+  .desktop-nav,
+  .desktop-contact {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  header {
+    padding: 15px;
+  }
+  
+  .logo {
+    font-size: 0.9em;
+    flex: 1;
+  }
+  
+  #competent {
+    font-size: 1.5em;
+  }
+  
+  /* Section Accueil */
+  #accueil {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .texte {
+    width: 100%;
+    transform: translateX(0);
+  }
+  
+  .image {
+    width: 100%;
+    transform: translateX(0);
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  
+  #promesse {
+    font-size: 2em;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .sous-titre-accueil {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    width: 100%;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .boutons-accueil {
+    margin-top: 30px;
+  }
+  
+  .contact2, .invit {
+    width: 45%;
+    font-size: 1em;
+    height: 6vh;
+  }
+  
+  .titre-section {
+    font-size: 1.5rem;
+    margin: 40px 0 20px 0;
+  }
+  
+  /* Section About */
+  #about {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  #about div {
+    width: 100%;
+  }
+  
+  .texte_about {
+    transform: translateX(0);
+  }
+  
+  /* Section Services */
+  #services {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #services div {
+    width: 90%;
+    max-width: 400px;
+    margin: 15px auto;
+    height: auto;
+    min-height: 200px;
+  }
+  
+  /* Section Avantages */
+  #avantages {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #avantages div {
+    width: 90%;
+    max-width: 500px;
+    margin: 15px auto;
+    height: auto;
+    min-height: 220px;
+  }
+  
+  /* Section Projets */
+  #projets {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #projets img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 250px;
+    margin: 10px 0;
+  }
+  
+  /* Section Contact */
+  #contact {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  #contact div {
+    width: 100%;
+  }
+  
+  #contact .contact2,
+  #contact .invit {
+    width: 48%;
+    font-size: 1em;
+  }
+  
+  main {
+    margin-top: 12%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+  
+  .logo {
+    font-size: 0.8em;
+  }
+  
+  #competent {
+    font-size: 1.2em;
+    margin-top: -8px;
+  }
+  
+  #promesse {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .sous-titre-accueil {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 0.85em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+  
+  .boutons-accueil {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+  
+  .contact2, .invit {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  .titre-section {
+    font-size: 1.3rem;
+    margin: 30px 0 15px 0;
+  }
+  
+  #services div {
+    width: 95%;
+    height: auto;
+    min-height: 180px;
+    padding: 15px;
+  }
+  
+  #avantages div {
+    width: 95%;
+    height: auto;
+    min-height: 200px;
+    padding: 15px;
+  }
+  
+  #services .icon,
+  #avantages .icon {
+    width: 20%;
+    height: 8vh;
+    font-size: 1.5rem;
+  }
+  
+  #projets img {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  #contact form {
+    height: auto;
+    min-height: 350px;
+  }
+  
+  #contact .contact2,
+  #contact .invit {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .mobile-nav {
+    width: 85%;
+  }
+  
+  main {
+    margin-top: 15%;
+  }
+  
+  p[style*="font-size: 2rem"] {
+    font-size: 1.5rem !important;
+  }
+}
