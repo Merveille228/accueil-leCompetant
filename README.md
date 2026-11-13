@@ -1,40 +1,61 @@
-# Cabinet Le Compétent - version React (JSX)
+# <div align="center">CABINET LE COMPÉTENT</div>
 
-## 1. Installer
+<div align="center">
+  <h3>Une présence numérique à l'image de notre expertise.</h3>
+  <p>
+    Site web vitrine de présentation du Cabinet Le Compétent.
+    <br />
+    Découvrez notre univers, nos activités et nos services.
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/React-Frontend-blue?logo=react" alt="React" />
+    <img src="https://img.shields.io/badge/Vite-Build%20Tool-646CFF?logo=vite" alt="Vite" />
+    <img src="https://img.shields.io/badge/JavaScript-ES6%2B-yellow?logo=javascript" alt="JavaScript" />
+  </p>
+</div>
+
+---
+
+## À propos
+
+**Cabinet Le Compétent** est un site vitrine conçu pour présenter le cabinet et renforcer sa visibilité sur le web.
+
+L'objectif est de proposer une interface moderne, intuitive et responsive permettant aux visiteurs de découvrir le cabinet et d'accéder facilement à ses informations.
+
+## Technologies utilisées
+
+- React
+- JavaScript (ES6+)
+- Vite
+- CSS
+
+## Installation
+
 ```bash
+git clone https://github.com/Merveille228/accueil-leCompetant.git
+
+cd accueil-leCompetant
+
 npm install
+
+npm run dev
 ```
 
-## 2. Coller les 3 composants Originkit
-Remplace le contenu de ces 3 fichiers (garde les noms et l'extension .tsx) :
-- `src/components/originkit/LightCables.tsx`
-- `src/components/originkit/SmokyText.tsx`
-- `src/components/originkit/CrumpleCardCarousel.tsx`
+## Build
 
-Puis, **seulement pour Crumple**, lance :
+Pour générer la version de production :
+
 ```bash
-npm run patch:crumple
-```
-(il retire les imports Framer, branche `three` depuis npm et laisse la page défiler au doigt sur mobile)
-
-## 3. Photos
-Tes photos restent dans `public/assets/` (le zip n'y touche pas). Les noms sont à écrire dans `src/data/images.js` (espaces, accents et apostrophes sont gérés).
-
-## 3 bis. Ajouter / changer des photos
-Mets-les dans `public/assets/` puis écris leurs chemins dans `src/data/images.js`
-(ex. `hero: "/assets/hero.jpg"`). Compresse-les avant (WebP ou JPG léger) et évite les espaces/accents dans les noms.
-
-## 4. Modifier les textes
-Tout est dans `src/data/content.js`.
-
-## 5. Lancer
-```bash
-npm run dev      # développement
-npm run build    # version à publier (dossier dist)
+npm run build
 ```
 
-## À vérifier avant de publier
-- l'adresse e-mail dans `content.js`
-- les délais, facilités de paiement et zone d'intervention de la FAQ
-- le formulaire ne marche que sur Netlify (en local, il affichera un message d'échec)
-- `og:image` dans `index.html` (URL absolue)
+Les fichiers optimisés seront générés dans le dossier `dist/`.
+
+---
+
+<div align="center">
+  <strong>CABINET LE COMPÉTENT</strong>
+  <br />
+  <sub>© 2026 — Tous droits réservés.</sub>
+</div>
