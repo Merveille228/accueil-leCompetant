@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -6,331 +6,32 @@
     <meta name="description" content="Cabinet LE COMPETENT - Expertise foncière, Topographie et Architecture au Togo. Sécurisez votre terrain avec nos services professionnels." />
     <meta name="keywords" content="expertise foncière, topographie, lotissement, titre foncier, Togo, Lomé, cadastre, architecture" />
     <meta name="author" content="Cabinet LE COMPETENT" />
-    
-    <!-- Open Graph pour réseaux sociaux -->
+    <meta name="theme-color" content="#0b0b0b" />
+
     <meta property="og:title" content="Cabinet LE COMPETENT - Expertise Foncière & Topographie" />
     <meta property="og:description" content="Sécurisez votre terrain, Construisez l'avenir. Services d'expertise foncière et topographie au Togo." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/photoE.jpg" />
-    
+    <!-- og:image : ajoute ici l'URL ABSOLUE d'une photo une fois le site en ligne
+         ex. <meta property="og:image" content="https://ton-domaine.tg/assets/hero.jpg" /> -->
+
     <title>Cabinet LE COMPETENT - Expertise Foncière & Topographie</title>
-    <link rel="stylesheet" href="competent.css" />
+    <script>
+      try {
+        var t = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <!-- Bouton Mode Sombre -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
-      <span class="sun-icon">☀️</span>
-      <span class="moon-icon">🌙</span>
-    </button>
-
-    <header>
-      <div class="logo">
-        CABINET
-        <span id="competent"> LE COMPETENT </span>
-      </div>
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#services">Nos services</a></li>
-          <li><a href="#avantages">Avantages</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#temoignages">Témoignages</a></li>
-        </ul>
-      </nav>
-      <button class="contact desktop-contact"><a href="#contact">Contactez-nous</a></button>
-      <button class="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </header>
-    
-    <div class="mobile-overlay"></div>
-    <nav class="mobile-nav">
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#about">A propos</a></li>
-        <li><a href="#services">Nos services</a></li>
-        <li><a href="#avantages">Avantages</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#temoignages">Témoignages</a></li>
-        <li><a href="#contact" class="mobile-contact-btn">Contactez-nous</a></li>
-      </ul>
-    </nav>
-    
-    <main>
-      <section id="accueil">
-        <div class="texte">
-          <p class="sous-titre-accueil">
-            Expertise foncière & Topographie
-          </p>
-          <p id="promesse">
-            <strong> Sécurisez votre terrain, Construisez l'avenir </strong>
-          </p>
-          <p class="description">
-            Cabinet LE COMPETENT accompagne particuliers et entreprises pour
-            l'obtention du titre foncier, levées topographiques, lotissement
-            et le suivi juridique et technique des travaux
-          </p>
-          <div class="boutons-accueil">
-            <button class="contact2" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Contactez-nous</button>
-            <button class="invit" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">Nos services</button>
-          </div>
-        </div>
-        <div class="image">
-          <img
-            src="./assets/WhatsApp Image 2025-10-18 à 13.46.29_6a23e3f2.jpg"
-            alt="Travaux de topographie sur le terrain"
-          />
-        </div>
-      </section>
-      
-      
-      <p class="titre-section">A propos</p>
-      <section id="about">
-        <div class="texte_about">
-          <p>
-            Le cabinet "Le compétent" a été créé pour une gestion optimale de votre
-            chantier, de l'acquisition du terrain jusqu'à la finition de l'immeuble.
-          </p>
-          <p>
-            Nous constituons un groupe de professionnels formés
-            spécifiquement pour garantir votre satisfaction.
-          </p>
-          <p>
-            Notre professionnalisme, notre fiabilité de service et
-            notre rapidité nous ont permis de bâtir notre réputation d'excellence.
-          </p>
-          <p>
-            Nous allions expertise technique et conseil juridique pour protéger
-            vos droits et sécuriser vos investissements.
-          </p>
-          <ul>
-            <li>Professionnalisme et transparence</li>
-            <li>Accompagnement juridique et technique</li>
-            <li>Intervention rapide sur le terrain</li>
-            <li>Suivi personnalisé de votre projet</li>
-          </ul>
-        </div>
-        <div>
-          <img src="./assets/photoE.jpg" alt="Équipe du Cabinet Le Compétent sur le terrain" />
-        </div>
-      </section>
-      
-      <p class="titre-section">Nos services</p>
-      <section id="services">
-        <div>
-          <p class="icon">📜</p>
-          <p>Expertise foncière</p>
-          <p>Évaluation, cadastre, et sécurisation des droits de propriétés</p>
-        </div>
-        <div>
-          <p class="icon">📐</p>
-          <p>Topographie</p>
-          <p>Levés topographiques précis, plans et cartographie professionnelle</p>
-        </div>
-        <div>
-          <p class="icon">🗃️</p>
-          <p>Architecture</p>
-          <p>Conception des plans et suivi technique des constructions</p>
-        </div>
-        <div>
-          <p class="icon">⛪</p>
-          <p>Lotissement</p>
-          <p>Division réglementée des terrains et mise en conformité</p>
-        </div>
-      </section>
-      
-      <p class="titre-section">Pourquoi avoir un titre foncier?</p>
-      <section id="avantages">
-        <div>
-          <p class="icon">🏠</p>
-          <p>Faire valoir son droit de propriété</p>
-          <p>Protégez votre investissement et vos droits de manière légale et définitive</p>
-        </div>
-        <div>
-          <p class="icon">⚖️</p>
-          <p>Éviter les litiges fonciers</p>
-          <p>Un titre clair réduit considérablement les risques de conflits</p>
-        </div>
-        <div>
-          <p class="icon">🔒</p>
-          <p>Sécuriser vos transactions</p>
-          <p>Facilitez la vente, l'achat ou la transmission de votre bien immobilier</p>
-        </div>
-      </section>
-      
-      <p class="titre-section">Projets & Réalisations</p>
-      <section id="projets">
-        <img src="./assets/img1.jpg" alt="Projet de lotissement réalisé" />
-        <img src="./assets/img2.jpg" alt="Levée topographique en cours" />
-        <img src="./assets/img3.jpg" alt="Bornage de terrain finalisé" />
-      </section>
-      
-      <!-- Section Témoignages -->
-      <p class="titre-section">Ce que disent nos clients</p>
-      <section id="temoignages">
-        <div class="temoignage-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="temoignage-text">
-            "Service exceptionnel ! L'équipe du Cabinet Le Compétent a géré mon dossier 
-            de titre foncier avec professionnalisme. Tout était clair et rapide."
-          </p>
-          <p class="temoignage-author">- Koffi M.</p>
-        </div>
-        <div class="temoignage-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="temoignage-text">
-            "Je recommande vivement ! Les levées topographiques étaient précises 
-            et l'accompagnement juridique m'a évité bien des problèmes."
-          </p>
-          <p class="temoignage-author">- Ama D.</p>
-        </div>
-        <div class="temoignage-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="temoignage-text">
-            "Une équipe réactive et compétente. Mon projet de lotissement 
-            a été mené à bien dans les délais prévus. Merci !"
-          </p>
-          <p class="temoignage-author">- Yao E.</p>
-        </div>
-      </section>
-      
-      <!-- Section FAQ -->
-      <p class="titre-section">Questions fréquentes</p>
-      <section id="faq">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Combien de temps faut-il pour obtenir un titre foncier ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Le délai varie entre 6 et 12 mois selon la complexité du dossier. 
-            Nous vous accompagnons à chaque étape pour accélérer le processus.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Quels documents sont nécessaires pour une expertise foncière ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Documents requis : pièce d'identité, attestation villageoise, 
-            plan de localisation, et tout document prouvant la propriété du terrain.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Proposez-vous des plans de paiement ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui, nous offrons des facilités de paiement adaptées à votre budget. 
-            Contactez-nous pour discuter des options disponibles.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Intervenez-vous sur tout le territoire togolais ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui, nous intervenons dans toutes les régions du Togo. 
-            Notre équipe se déplace pour tous types de projets.</p>
-          </div>
-        </div>
-      </section>
-      
-      <p class="titre-section">Contact</p>
-      <section id="contact">
-        <div>
-          <p style="font-size: 1.2em; margin-bottom: 30px;">
-            <strong>Prêt à sécuriser votre terrain ?</strong>
-          </p>
-          <p>
-            Contactez-nous via le formulaire ou
-            directement par téléphone / WhatsApp
-          </p>
-          <div style="display: flex; margin-top: 30px; margin-bottom: 30px;">
-            <button class="contact2"><a href="tel:+22892307825" style="color: white; text-decoration: none;">Appeler</a></button>
-            <button class="invit">
-              <a href="https://wa.me/22892307825">WhatsApp</a>
-            </button>
-          </div>
-          <p><strong>Adresse :</strong></p>
-          <p>01 Adewui, Lomé, TOGO</p>
-          
-          <p style="margin-top: 20px;"><strong>Horaires :</strong></p>
-          <p>Lun - Ven : 8h00 - 17h00<br>Samedi : 9h00 - 13h00</p>
-        </div>
-        <div>
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p style="display: none;">
-              <label>Ne pas remplir : <input name="bot-field" /></label>
-            </p>
-            
-            <input type="text" name="nom" placeholder="Nom complet" required />
-            <input type="tel" name="telephone" placeholder="Téléphone" required />
-            <input type="email" name="email" placeholder="Email (optionnel)" />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Votre message"
-              rows="5"
-              required
-            ></textarea>
-            <div>
-              <input type="submit" value="Envoyer" />
-              <input type="reset" value="Annuler" />
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>CABINET LE COMPETENT</h3>
-          <p>Votre partenaire de confiance pour l'expertise foncière et la topographie au Togo.</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Liens rapides</h4>
-          <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#services">Nos services</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Contact</h4>
-          <p>📞 +228 92 30 78 25</p>
-          <p>📍 01 Adewui, Lomé, TOGO</p>
-          <p>📧 contact@cabinetlecompetent.tg</p>
-        </div>
-        
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2025 Cabinet LE COMPETENT. Tous droits réservés.</p>
-      </div>
-    </footer>
-
-    <!-- Bouton Retour en haut -->
-    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
-      ↑
-    </button>
-
-    <script src="./competent.js"></script>
+    <!-- Formulaire "fantôme" : permet à Netlify de détecter le formulaire React -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nom" />
+      <input type="tel" name="telephone" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
